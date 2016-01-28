@@ -1,6 +1,6 @@
 # pyIGEN
 
-This is a python module for parsing the binary log messages from the IGEN Tech S-W02 solar panel monitor.
+This is a python module for parsing the binary log messages from the IGEN Tech S-W02E solar panel monitor.
 The code is tested with messages from a Solax TL 3600
 
 ## Usage
