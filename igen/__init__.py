@@ -70,12 +70,37 @@ class IGENMessage(object):
 
         return self
 
-    def output(self):
+    def outputs(self):
         return [
             (self.ov1, self.oa1, self.op1),
             (self.ov2, self.oa2, self.op2),
             (self.ov3, self.oa3, self.op3)
         ]
+
+    def inputs(self):
+        return [
+            (self.pv1, self.pa1),
+            (self.pv2, self.pa2),
+            (self.pv3, self.pa3)
+        ]
+
+    def report(self):
+        print("Logger: {}".format(self.serial))
+        print("Temperature: {} degree celcius".format(self.temperature))
+        print()
+        print("Inputs: ")
+        print("  Channel 1:  {:6.2f} V  {:5.2f} A".format(self.pv1, self.pa1))
+        print("  Channel 2:  {:6.2f} V  {:5.2f} A".format(self.pv2, self.pa2))
+        print("  Channel 3:  {:6.2f} V  {:5.2f} A".format(self.pv3, self.pa3))
+        print()
+        print("Outputs: ({} Hz)".format(self.oHz))
+        print("  L1:  {:6.2f} V  {:5.2f} A  {:5.0f} W".format(self.ov1, self.oa1, self.op1))
+        print("  L2:  {:6.2f} V  {:5.2f} A  {:5.0f} W".format(self.ov2, self.oa2, self.op2))
+        print("  L3:  {:6.2f} V  {:5.2f} A  {:5.0f} W".format(self.ov3, self.oa3, self.op3))
+        print()
+        print("Energy today:   {:8.1f} kWh".format(self.energy_today))
+        print("Energy overall: {:8.1f} kWh".format(self.energy_overall))
+        print("Operational hours: {}".format(self.operational_hours))
 
     def __repr__(self):
         total_power = self.op1 + self.op2 + self.op3
