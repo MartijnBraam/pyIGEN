@@ -41,3 +41,12 @@ Energy today:        2.9 kWh
 Energy overall:     10.8 kWh
 Operational hours: 86
 ```
+
+## monitor.py
+
+The `monitor.py` file in this repo is a mini server that listens on UDP port 1337 and receives the log messages sent by
+the S-W02E and displays the report for each message. Just use it with:
+
+```bash
+$ python3 monitor.py
+```
