@@ -86,7 +86,7 @@ class IGENMessage(object):
 
     def report(self):
         print("Logger: {}".format(self.serial))
-        print("Temperature: {} degree celcius".format(self.temperature))
+        print("Temperature: {} degrees celcius".format(self.temperature))
         print()
         print("Inputs: ")
         print("  Channel 1:  {:6.2f} V  {:5.2f} A".format(self.pv1, self.pa1))

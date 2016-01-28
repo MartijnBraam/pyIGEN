@@ -25,7 +25,7 @@ The code is tested with messages from a Solax TL 3600
 >>> # To get a quick overview of the datapoint use .report()
 >>> log.report()
 Logger: S36215A1080049
-Temperature: 29.0 degree celcius
+Temperature: 29.0 degrees celcius
 
 Inputs: 
   Channel 1:  337.70 V   2.50 A
