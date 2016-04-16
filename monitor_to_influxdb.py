@@ -28,7 +28,8 @@ def influx_submit(datapoint):
             "output1_pwr": datapoint.op1,
             "output2_pwr": datapoint.op2,
             "output3_pwr": datapoint.op3,
-            "temp": datapoint.temperature
+            "temp": datapoint.temperature,
+            "total": datapoint.energy_today
         }
     }]
     influxclient.write_points(json_body)
